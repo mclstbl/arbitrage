@@ -24,7 +24,7 @@ if (Meteor.isClient) {
       event.preventDefault();
 
       var currencytemp = document.getElementById("select-currency");
-      //var currency = currencytemp.[currencytemp.selectedIndex].value;
+      var currency = currencytemp[currencytemp.selectedIndex].value;
 
       Session.setDefault('currency', currency);
     }
