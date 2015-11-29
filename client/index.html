@@ -6,7 +6,7 @@
   <h1>Welcome to ourBITrage</h1>
   <h2>A real-time moneymaking platform for everyone</h2>
   <h4>ourBITrage uses the Bellman-Ford algorithm to find negative cycles in the exchange rate graph, generated from the European Central Bank Exchange Rates API client module for nodejs. It then returns a path of currency exchanges that will give you maximum profit.</h4>
-  <h4>In short, for the price of 0.0028 Bitcoin, we can give you currency exchange suggestions to make your money grow. See it to believe it.</h4>
+  <h4>For the price of 0.0028 Bitcoin, we can give you currency exchange suggestions to make your money grow. See it to believe it.</h4>
 
   <form id="myForm" class="textinput">
 
@@ -24,17 +24,40 @@
 
   </form>
 
+  <div class="answer">
+    {{> answer}}
+  </div>
+
   <h4>ECB Exchange Rates change daily. Please come back tomorrow.</h4>
+
+  <script>
+    function printValue() {
+      amount=document.getElementById("textinput").value;
+      currency=document.getElementById("select-currency").value;
+    }
+
+    function makepayment() {
+      if (document.getElementById("textinput").value && document.getElementById("select-currency").value) {
+
+        payment=true; //cahnge later
+
+        if (payment) {
+        //  bellmanford();
+        // setupECB(document.getElementById("textinput").value, document.getElementById("select-currency").value);
+        }
+      }
+    }
+  </script>
 </body>
 
 <template name="textinput">
  	<label for="textinput">Amount: </label>
-  <input type="number" name="amount" placeholder="Enter amount to convert" required/>  
+  <input id="textinput" type="number" name="amount" placeholder="Enter amount to convert" required/>  
 </template>
 
 <template name="menu">
 	<label for="select-currency">Currency: </label>
-	<select id="select-currency" required>
+	<select id="select-currency" name="currency" required>
 		<option value="">Select a currency</option>
 		<option value="AUD">Australian Dollar</option>
 		<option value="BGN">Bulgarian Lev</option>
@@ -57,7 +80,7 @@
 		<option value="LTL">Lithuanian Litas</option>
 		<option value="LVL">Latvian Lats</option>
 		<option value="MXN">Mexican Peso</option>
-		<option value="MYR">Malaysian Ringgit</option>
+		<!--option value="MYR">Malaysian Ringgit</option>
 		<option value="NOK">Norwegian Krone</option>
 		<option value="NZD">New Zealand Dollar</option>
 		<option value="PHP">Philippine Peso</option>
@@ -69,10 +92,14 @@
 		<option value="THB">Thai Baht</option>
 		<option value="TRY">Turkish Lira</option>
 		<option value="USD">US Dollar</option>
-		<option value="ZAR">South African Rand</option>
+		<option value="ZAR">South African Rand</option-->
 	</select>
 </template>
 
 <template name="arbitrate">
-  <button>Pay with <img src="Bitcoin_logo.png" alt="Bitcoin" style="scale=0.1;"> to arbitrate!</button>
+  <button onclick="makepayment()" id="arbitrate">Pay with <img src="Bitcoin_logo.png" alt="Bitcoin" style="scale=0.1;"> to arbitrage!</button>
+</template>
+
+<template name="answer">
+  <p></p>
 </template>

@@ -4,17 +4,17 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-base             # Packages every Meteor app needs to have
+# meteor-base             # Packages every Meteor app needs to have
 mobile-experience       # Packages for a great mobile UX
-mongo                   # The database Meteor supports right now
-blaze-html-templates    # Compile .html files into Meteor Blaze views
-session                 # Client-side reactive dictionary for your app
-jquery                  # Helpful client-side library
-tracker                 # Meteor's client-side reactive programming library
+# mongo                   # The database Meteor supports right now
+# blaze-html-templates    # Compile .html files into Meteor Blaze views
+# session                 # Client-side reactive dictionary for your app
+# jquery                  # Helpful client-side library
+# tracker                 # Meteor's client-side reactive programming library
 
-standard-minifiers      # JS/CSS minifiers run for production mode
-es5-shim                # ECMAScript 5 compatibility for older browsers.
-ecmascript              # Enable ECMAScript2015+ syntax in app code
+# standard-minifiers      # JS/CSS minifiers run for production mode
+# es5-shim                # ECMAScript 5 compatibility for older browsers.
+# ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
@@ -22,3 +22,20 @@ robodo:exchange-rates
 http
 meteor
 underscore
+random
+check
+ejson
+webapp
+facts
+ddp
+minimongo
+callback-hook
+binary-heap
+disable-oplog
+mongo-id
+npm-mongo
+diff-sequence
+url
+robodo:meteor-debug
+meteor-platform
+dnuske:combinatorics
